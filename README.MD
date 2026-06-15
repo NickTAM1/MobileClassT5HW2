@@ -8,7 +8,7 @@ A simple AR mini game built with Unity AR Foundation.
    translucent blue outlines.
 3. Tap any detected surface to drop a gem there.
 4. Tap a gem to collect it and increase your score.
-5. If tracking is lost, the on-screen message will tell you to move
+5. If tracking is lost, the on screen message will tell you to move
    slowly to a brighter or more detailed area.
 
 ## Technical Setup
