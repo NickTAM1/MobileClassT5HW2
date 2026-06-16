@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 using TMPro;
@@ -60,12 +61,9 @@ public class ARPlacementManager : MonoBehaviour
     // Handles both placing new gems and collecting existing ones
     void HandleTouch()
     {
-        bool isClicking = Input.GetMouseButtonDown(0);
-        bool isTouching = Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began;
+        if (Pointer.current == null || !Pointer.current.press.wasPressedThisFrame) return;
 
-        if (!isClicking && !isTouching) return;
-
-        Vector2 screenPosition = isTouching ? Input.GetTouch(0).position : (Vector2)Input.mousePosition;
+        Vector2 screenPosition = Pointer.current.position.ReadValue();
 
         // Did the player tap an already-placed gem? If so, collect it.
         Ray ray = Camera.main.ScreenPointToRay(screenPosition);
