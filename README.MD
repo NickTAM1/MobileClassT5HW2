@@ -21,4 +21,4 @@ A simple AR mini game built with Unity AR Foundation.
 https://github.com/NickTAM1/MobileClassT5HW2.git
 
 ## Demo
-https://github.com/NickTAM1/MobileClassT5HW2/issues/1#issue-4675947942
+https://github.com/user-attachments/assets/19dda129-f9cc-4421-babd-6af2d5ae70c3
